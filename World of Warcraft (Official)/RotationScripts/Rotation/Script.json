@@ -1,0 +1,23 @@
+﻿{
+  "name": {
+    "invariant": "Rotation",
+    "zh-CN": "Rotation（简体中文）",
+    "zh-TW": "Rotation（繁體中文）"
+  },
+  "lifecyle": 0,
+  "type": 1,
+  "categories": [],
+  "description": {
+    "invariant": "Description for the script.",
+    "zh-CN": "脚本描述（简体中文）",
+    "zh-TW": "腳本描述（繁體中文）"
+  },
+  "creatorId": "00000000-0000-0000-0000-000000000000",
+  "creatorName": "Unknown",
+  "isOpenSource": false,
+  "isPublished": false,
+  "latestVersion": 1,
+  "creationTime": "2016-07-13T17:02:24.3985485Z",
+  "updateTime": "2016-07-13T17:02:24.3985485Z",
+  "id": "b8e5fa09-2518-4dc4-971f-f74ddfc796e7"
+}

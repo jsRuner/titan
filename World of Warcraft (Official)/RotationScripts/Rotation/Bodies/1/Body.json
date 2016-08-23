@@ -1,0 +1,235 @@
+﻿{
+  "isAutoReset": true,
+  "mainAction": {
+    "displayName": {
+      "invariant": "Main Action",
+      "zh-CN": "主动作",
+      "zh-TW": "主動作"
+    },
+    "name": "__Main",
+    "sourceCode": "__Main.lua"
+  },
+  "actions": [
+    {
+      "displayName": {
+        "invariant": "Action 1",
+        "zh-CN": "动作1",
+        "zh-TW": "動作1"
+      },
+      "name": "Action 1",
+      "sourceCode": "Action 1.lua"
+    }
+  ],
+  "settings": [
+    {
+      "name": "Setting1",
+      "displayName": {
+        "invariant": "Setting 1 (Text)",
+        "zh-CN": "设置1（文本）",
+        "zh-TW": "設置1（文本）"
+      },
+      "description": {
+        "invariant": "This is setting 1.",
+        "zh-CN": "这是设置1",
+        "zh-TW": "這是設置1"
+      },
+      "dataType": 1,
+      "defaultValue": "Hello",
+      "defaultValues": [],
+      "optionalValues": [
+        "Hello",
+        "World"
+      ],
+      "restrictedToOptionalValues": true
+    },
+    {
+      "name": "Setting2",
+      "displayName": {
+        "invariant": "Setting 2 (TextArray)",
+        "zh-CN": "设置2（文本数组）",
+        "zh-TW": "設置2（文本数组）"
+      },
+      "description": {
+        "invariant": "This is setting 2.",
+        "zh-CN": "这是设置2",
+        "zh-TW": "這是設置2"
+      },
+      "dataType": 2,
+      "defaultValue": "",
+      "defaultValues": [
+        "Hello",
+        "Titan"
+      ],
+      "optionalValues": [
+        "Hello",
+        "World",
+        "Titan"
+      ],
+      "restrictedToOptionalValues": false
+    },
+    {
+      "name": "Setting3",
+      "displayName": {
+        "invariant": "Setting 3 (Boolean)",
+        "zh-CN": "设置3（布尔）",
+        "zh-TW": "設置3（布尔）"
+      },
+      "description": {
+        "invariant": "This is setting 3.",
+        "zh-CN": "这是设置3",
+        "zh-TW": "這是設置3"
+      },
+      "dataType": 0,
+      "defaultValue": "true",
+      "defaultValues": [],
+      "optionalValues": [],
+      "restrictedToOptionalValues": false
+    },
+    {
+      "name": "Setting 4",
+      "displayName": {
+        "invariant": "Setting 4 (Double)",
+        "zh-CN": "设置4（小数）",
+        "zh-TW": "設置4（小數）"
+      },
+      "description": {
+        "invariant": "This is setting 4.",
+        "zh-CN": "这是设置4",
+        "zh-TW": "這是設置4"
+      },
+      "dataType": 5,
+      "defaultValue": "1",
+      "defaultValues": [],
+      "optionalValues": [
+        "1",
+        "2.2",
+        "3.3"
+      ],
+      "restrictedToOptionalValues": true
+    },
+    {
+      "name": "Setting 5",
+      "displayName": {
+        "invariant": "Setting 5 (DoubleArray)",
+        "zh-CN": "设置5（小数集合）",
+        "zh-TW": "設置5（小數集合）"
+      },
+      "description": {
+        "invariant": "This is setting 5.",
+        "zh-CN": "这是设置5",
+        "zh-TW": "這是設置5"
+      },
+      "dataType": 6,
+      "defaultValue": "",
+      "defaultValues": [
+        "1",
+        "2.2"
+      ],
+      "optionalValues": [
+        "1",
+        "2.2",
+        "3.3"
+      ],
+      "restrictedToOptionalValues": false
+    }
+  ],
+  "startKeyBinding": {
+    "displayName": {
+      "invariant": "Start",
+      "zh-CN": "启动",
+      "zh-TW": "啟動"
+    },
+    "description": {
+      "invariant": "Start the paused or stopped rotation script (Default: Ctrl+F1)",
+      "zh-CN": "启动处于停止或者暂停状态的循环脚本（默认值：Ctrl+F1）",
+      "zh-TW": "啟動處於停止或者暫停狀態的迴圈腳本（預設值：Ctrl+F1）"
+    },
+    "defaultValue": {
+      "hasShift": false,
+      "hasAlt": false,
+      "hasCtrl": true,
+      "actionKey": 112
+    },
+    "name": "__Start",
+    "sourceCode": "__Start.lua"
+  },
+  "stopKeyBinding": {
+    "displayName": {
+      "invariant": "Stop",
+      "zh-CN": "停止",
+      "zh-TW": "停止"
+    },
+    "description": {
+      "invariant": "Stop the running rotation script, clearing all runtime information (Default: Ctrl+F2)",
+      "zh-CN": "停止处于运行状态的循环脚本，所有运行状态信息将全部清除（默认值：Ctrl+F2）",
+      "zh-TW": "停止處於運行狀態的迴圈腳本，所有運行狀態資訊將全部清除（預設值：Ctrl+F2）"
+    },
+    "defaultValue": {
+      "hasShift": false,
+      "hasAlt": false,
+      "hasCtrl": true,
+      "actionKey": 113
+    },
+    "name": "__Stop",
+    "sourceCode": "__Stop.lua"
+  },
+  "pauseKeyBinding": {
+    "displayName": {
+      "invariant": "Pause",
+      "zh-CN": "暂停",
+      "zh-TW": "暫停"
+    },
+    "description": {
+      "invariant": "Pause the running rotation script, keeping all runtime information (Default: Ctrl+F3)",
+      "zh-CN": "暂停处于运行状态的循环脚本，保留所有运行状态信息（默认值：Ctrl+F3）",
+      "zh-TW": "暫停處於運行狀態的迴圈腳本，保留所有運行狀態資訊（預設值：Ctrl+F3）"
+    },
+    "defaultValue": {
+      "hasShift": false,
+      "hasAlt": false,
+      "hasCtrl": true,
+      "actionKey": 114
+    },
+    "name": "__Pause",
+    "sourceCode": "__Pause.lua"
+  },
+  "keyBindings": [
+    {
+      "displayName": {
+        "invariant": "OhTest",
+        "zh-CN": "测试",
+        "zh-TW": "測試"
+      },
+      "description": {
+        "invariant": "Test Key Binding",
+        "zh-CN": "测试按键绑定",
+        "zh-TW": "測試按鍵綁定"
+      },
+      "defaultValue": {
+        "hasShift": false,
+        "hasAlt": false,
+        "hasCtrl": false,
+        "actionKey": 115
+      },
+      "name": "__OhTest",
+      "sourceCode": "__OhTest.lua"
+    }
+  ],
+  "version": 1,
+  "isEditable": true,
+  "description": {
+    "invariant": "Description for the script body.",
+    "zh-CN": ">>>修改这里：脚本本体描述（简体中文）<<<",
+    "zh-TW": ">>>修改這裡：腳本本體描述（繁體中文）<<<"
+  },
+  "libraryScriptReferences": [
+    {
+      "scriptId": "c1d5d5e8-7910-4453-b841-7bf7bc752aff",
+      "scriptVersion": 1,
+      "namespace": "hiphp"
+    }
+  ],
+  "creationTime": "2016-07-13T17:02:24.4025628Z",
+  "updateTime": "2016-07-13T17:02:24.4025628Z",
+  "id": "45531fa3-2d40-418c-95f2-4cee8d24b39b"
+}

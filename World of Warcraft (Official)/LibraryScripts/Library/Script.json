@@ -1,0 +1,23 @@
+﻿{
+  "name": {
+    "invariant": "Library",
+    "zh-CN": "Library（简体中文）",
+    "zh-TW": "Library（繁體中文）"
+  },
+  "lifecyle": 0,
+  "type": 0,
+  "categories": [],
+  "description": {
+    "invariant": "Description for the script.",
+    "zh-CN": "脚本描述（简体中文）",
+    "zh-TW": "腳本描述（繁體中文）"
+  },
+  "creatorId": "00000000-0000-0000-0000-000000000000",
+  "creatorName": "Unknown",
+  "isOpenSource": false,
+  "isPublished": false,
+  "latestVersion": 1,
+  "creationTime": "2016-07-13T17:04:35.413929Z",
+  "updateTime": "2016-07-13T17:04:35.413929Z",
+  "id": "c1d5d5e8-7910-4453-b841-7bf7bc752aff"
+}
