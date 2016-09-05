@@ -18,8 +18,27 @@
       },
       "name": "Action 1",
       "sourceCode": "Action 1.lua"
+    },
+    {
+      "displayName": {
+        "invariant": "Action 2",
+        "zh-CN": "动作2",
+        "zh-TW": "動作2"
+      },
+      "name": "Action 2",
+      "sourceCode": "Action 2.lua"
+    },
+    {
+      "displayName": {
+        "invariant": "Action 3",
+        "zh-CN": "MS加血脚本",
+        "zh-TW": "MS加血脚本"
+      },
+      "name": "Action 3",
+      "sourceCode": "Action 3.lua"
     }
   ],
+
   "settings": [
     {
       "name": "Setting1",
@@ -213,6 +232,26 @@
       },
       "name": "__OhTest",
       "sourceCode": "__OhTest.lua"
+    },
+    {
+      "displayName": {
+        "invariant": "__StartMove",
+        "zh-CN": "位移脚本启动",
+        "zh-TW": "位移脚本启动"
+      },
+      "description": {
+        "invariant": "Test Key Binding",
+        "zh-CN": "测试按键绑定",
+        "zh-TW": "測試按鍵綁定"
+      },
+      "defaultValue": {
+        "hasShift": false,
+        "hasAlt": false,
+        "hasCtrl": false,
+        "actionKey": 116
+      },
+      "name": "__StartMove",
+      "sourceCode": "__StartMove.lua"
     }
   ],
   "version": 1,

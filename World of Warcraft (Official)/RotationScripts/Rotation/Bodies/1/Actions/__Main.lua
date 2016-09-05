@@ -1,132 +1,55 @@
-﻿-- print("开搞")
---hiphp.hr('啦啦啦啦')
-
---hiphp.hr('呵呵呵')
+﻿
 
 
---[[
+-- t1=t1 or GetTime()-5;
 
+-- hiphp.findFishFromBag()
+-- hiphp.toNpc()
 
-需要循环执行。不可以等待，否则程序卡死
-
-先寻找鱼漂。没找到，则释放钓鱼技能
-
-释放钓鱼技能以后，做个标记
-
-找到鱼漂以后。做个标记。 
-
-有则执行点击功能。无则继续循环。
-
-停止的时候重置变量 
-
-钓鱼22秒，如果22秒没有上钩。则重新开始
-
---]]
-
---重置所有变量.只一次
-if _G.start then
-
-	_G.diao =  0
-	_G.piao =  0
-	_G.piaoObj = nil
-
-	_G.start = false
-end
-
-
-
---现在的时间
-tNow = GetTime()
---上一次点击鱼漂的时间。如果无则为0
-tLast = tLast or 0
-
-
-
-
-
-
-
-
-
--- A = A or 1
-
--- if A==1 then
--- 	A =2
--- 	print(A)
+-- hiphp.killFish()
+-- hiphp.goFish()
+-- t = hiphp.checkMerchant()
+-- if t then
+-- 	print('yes')
+-- 	hiphp.findFishFromBag()
+-- else
+-- 	print('no') 
 -- end
 
--- if true then
--- 	return
+-- hiphp.goRandomTreatment()
+-- hiphp_z = hiphp_z or 0
+-- if _G.poss then
+-- 	if GetTime() > hiphp_z then
+-- 		z = GetTime()+3
+-- 		for i=1,#_G.poss do
+-- 			hiphp.printTable(_G.poss[i])
+-- 		end
+		
+-- 		print('------------------------------------')
+-- 	end
+-- end
+
+--[[
+主动作:移动
+副动作:打怪
+--]]
+
+-- s = s or nil
+-- if s ==nil then
+-- 	hiphp.moveAlongPositions({{1285,103,130,4}})
+-- 	s = true
+	
 -- end
 
 
 
-
-_G.diao = _G.diao or 0
-_G.piao = _G.piao or 0
-
-
-
---print(_G.diao)
-
---没有钓鱼则执行钓鱼技能
-if  _G.diao == 0  then
-
-	--留10秒 取鱼
-	print(tLast)
-	print(tNow-tLast)
-	if tLast ~= 0 and tNow-tLast <= 5 then
-		print('取鱼中。。。')
-		return
-
-	end
+-- if _G.startMove and _G.poss then
+-- 	hiphp.moveAlongPositions(_G.poss)
+-- end
 
 
-	print('释放钓鱼技能')
-	ChatFrame10.editBox:SetText("/cast 钓鱼") 
-	ChatEdit_SendText(ChatFrame10.editBox) 
-	ChatFrame10.editBox:SetText("")
-	_G.diao = 1
-	_G.piaoObj = nil
-end
-
---表示钓鱼中未发现鱼漂。则寻找鱼漂
-if _G.diao == 1 and _G.piaoObj == nil then
-	print('钓鱼中。。寻找鱼漂')
-	_G.piaoObj = hiphp.getBobber()
-	-- _G.piao = 1
-	print(_G.piaoObj)
-end
-
---找到鱼漂
-if _G.piaoObj ~= nil then
-	print('找到鱼漂')
-
-	--第一次鱼漂的时间
-	tPiao = tPiao or GetTime()
-
-	print(_G.piaoObj)
-	havefish = hiphp.goFish(_G.piaoObj)
-
-	if havefish == 1 or tNow-tPiao >= 22  then
-		--重置
-		_G.piaoObj = nil
-		_G.diao =  0
-		_G.piao =  0
-		_G.over = 1
-		tPiao = nil
-
-		tLast = GetTime()
-	end
-end
---[[
+-- return "Action 3" --副本加血
+-- return "Action 2" --钓鱼
+return "Action 1" --刷怪
 
 
---找到鱼漂。
-if _G.diao == 1 and _G.piao == 1 then
-	print('找到鱼漂')
-	hiphp.goFish(_G.piaoObj)
-
-	--等待鱼上钩。
-end
---]]

@@ -1,26 +1,26 @@
 ﻿{
-  "defaultNamespace": "LB",
+  "defaultNamespace": "hiphp",
   "sections": [
     {
-      "name": "Sample Section",
-      "sourceCode": "Sample Section.lua"
+      "name": "base",
+      "sourceCode": "lib_hiphp_base.lua"
+    },
+    {
+      "name": "api",
+      "sourceCode": "lib_hiphp_api.lua"
     }
   ],
   "version": 1,
   "isEditable": true,
+  "lifecycle": 0,
   "description": {
     "invariant": "Description for the script body.",
     "zh-CN": ">>>修改这里：脚本本体描述（简体中文）<<<",
     "zh-TW": ">>>修改這裡：腳本本體描述（繁體中文）<<<"
   },
   "libraryScriptReferences": [
-    {
-      "scriptId": "00000000-0000-0000-0000-000000000000",
-      "scriptVersion": 0,
-      "namespace": "DummyNamespace（只是作为模板，不需要依赖库可以连这个也删掉）"
-    }
   ],
-  "creationTime": "2016-07-13T17:04:35.4169314Z",
-  "updateTime": "2016-07-13T17:04:35.4169314Z",
-  "id": "724443ba-d47d-4ac3-b08f-c224671c8a7f"
+  "creationTime": "2016-08-13T23:14:37.1963898Z",
+  "updateTime": "2016-08-13T23:14:37.1963898Z",
+  "id": "c1d5d5e8-7910-4453-b841-7bf7bc752aff"
 }

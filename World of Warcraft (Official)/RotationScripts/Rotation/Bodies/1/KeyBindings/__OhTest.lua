@@ -1,51 +1,42 @@
 
---是否钓鱼技能
-ChatFrame10.editBox:SetText("/cast 钓鱼") 
-ChatEdit_SendText(ChatFrame10.editBox) 
-ChatFrame10.editBox:SetText("") 
+-- print('test')
+
+-- hiphp.findFishFromBag()
+-- hiphp.test()
+-- hiphp.moveToASL()
 
 
-time = GetTime()
+--存储坐标。每次执行，会获取一个坐标，存到table中
+-- _G.poss = _G.poss or {}
+-- local playPos = hiphp.ttGetObjectPosition("player")
+-- print('获取当前位置坐标:',playPos['X'],playPos['Y'],playPos['Z'],playPos['R'])
+-- table.insert(_G.poss ,{playPos['X'],playPos['Y'],playPos['Z'],playPos['R']})
 
-for i=1,100000 do
-	print(i)
+
+
+
+
+
+
+
+
+-- name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3 = UnitBuff("party1","熊形态")
+-- print(name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3)
+
+--当前目标，是否存在恢复
+name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3 = UnitBuff("target","恢复")
+print(name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3)
+
+if name ~=nil then
+	print('存在恢复')
+else
+	print('不存在恢复')
 end
 
-print('寻找鱼漂')
+start, duration, enable =  GetSpellCooldown("身心合一")
+print(start, duration, enable) 
+--
 
---寻找鱼漂
+-- canBeTank, canBeHealer, canBeDPS = UnitGetAvailableRoles("player")
 
-ob = hiphp.findFishObj()
-
-print(ob)
-
---while true do 
-    --hiphp.gofish(ob)
---end
-
-
---[[
-money = floor(GetMoney()/10000)
-
-pitch = GetUnitPitch("player")
-
-myname = UnitName("player")
-
-unitCombatReach = hiphp.getTest()
-
-hiphp.movetotest()
-
-hiphp.getfishobj()
-
-if (print) then
-	print(money)
-	print(pitch)
-	print(myname)
-	print(unitCombatReach);
-
-
-	--print(tp[x])
-	--print(tp[y])
-	--print(tp[z])
-end
---]]
+-- print(canBeTank, canBeHealer, canBeDPS)
