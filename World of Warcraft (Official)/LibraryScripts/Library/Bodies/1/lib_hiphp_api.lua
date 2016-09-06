@@ -55,6 +55,19 @@ function targetRunByName(name)
 	ChatFrame10.editBox:SetText("")
 end
 
+--使用技能
+function useRunByName(name)
+	-- body
+	ChatFrame10.editBox:SetText("/use "..name) 
+	ChatEdit_SendText(ChatFrame10.editBox) 
+	ChatFrame10.editBox:SetText("")
+end
+--判断目标是否存在
+function isExistTarget()
+	-- body
+	return GetObject('target')
+end
+
 
 -----------------------------------------------------------------------------------
 --商业模块
@@ -389,3 +402,45 @@ end
 ------------------------------------------
 -- 给队伍中血量最低的人刷血
 -----------------------------------------
+
+
+------------------------------------------
+-- 判断player是否战斗中 true 表示战斗中
+-----------------------------------------
+function isFire()
+	-- body
+	return InCombatLockdown()
+end
+
+------------------------------------------
+-- 判断player是否马上。在马上，则是true
+-----------------------------------------
+function hiphpIsMounted()
+	-- body
+	return IsMounted()
+
+end
+
+------------------------------------------
+-- 判断player是否在户外。户外的定义是可以使用坐骑。
+-----------------------------------------
+function hiphpIsOutdoors()
+	-- body
+	return IsOutdoors()
+
+end
+
+------------------------------------------
+-- 使用群体治疗。指向性技能.
+-----------------------------------------
+function moreTreatment(name)
+	-- body
+	useRunByName(name)
+	isPending = IsAoeSpellPending()
+	if isPending then
+		ClickTerrain('target')
+	end
+end
+
+
+

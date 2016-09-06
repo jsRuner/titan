@@ -50,6 +50,7 @@
 
 -- return "Action 3" --副本加血
 -- return "Action 2" --钓鱼
-return "Action 1" --刷怪
+-- return "Action 1" --刷怪
+return "Action 4" --MS副本刷血脚本
 
 

@@ -36,6 +36,15 @@
       },
       "name": "Action 3",
       "sourceCode": "Action 3.lua"
+    },
+    {
+      "displayName": {
+        "invariant": "Action 4",
+        "zh-CN": "MS副本刷血脚本",
+        "zh-TW": "MS副本刷血脚本"
+      },
+      "name": "Action 4",
+      "sourceCode": "Action 4.lua"
     }
   ],
 

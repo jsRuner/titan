@@ -24,19 +24,36 @@
 -- print(name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3)
 
 --当前目标，是否存在恢复
-name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3 = UnitBuff("target","恢复")
-print(name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3)
+-- name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3 = UnitBuff("target","恢复")
+-- print(name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3)
 
-if name ~=nil then
-	print('存在恢复')
-else
-	print('不存在恢复')
-end
+-- if name ~=nil then
+-- 	print('存在恢复')
+-- else
+-- 	print('不存在恢复')
+-- end
 
-start, duration, enable =  GetSpellCooldown("身心合一")
-print(start, duration, enable) 
+-- start, duration, enable =  GetSpellCooldown("身心合一")
+-- print(start, duration, enable) 
 --
 
 -- canBeTank, canBeHealer, canBeDPS = UnitGetAvailableRoles("player")
 
 -- print(canBeTank, canBeHealer, canBeDPS)
+-----------------------------------------------------
+--2016.09.05测试代码。测试牧师副本刷血脚本
+----------------------------------------------------
+
+-- print('test')
+
+-- name, rank, icon, count, dispelType, duration, expires, caster, isStealable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff, _, nameplateShowAll, timeMod, value1, value2, value3 = UnitBuff("player", 1)
+
+-- print(name)
+
+-- print(hiphp.ttGetDistance('player','target'))
+
+
+-- hiphp.moreTreatment('圣言术：灵')
+
+print(hiphp.isExistTarget())
+
